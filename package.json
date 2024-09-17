@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.15.6",
+    "astro-icon": "^1.1.1",
     "flowbite": "^2.5.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",

@@ -1,0 +1,34 @@
+---
+import { skillsData } from '@/lib/data'
+import { Icon } from 'astro-icon/components'
+import SectionHeading from './shared/SectionHeading.astro'
+---
+
+<section id='habilidades' class='scroll-mt-28 mb-24 max-w-[53rem] text-center sm:mb-32'>
+    <SectionHeading title='Habilidades' />
+    <ul class='flex flex-wrap justify-center gap-4 text-xl text-gray-800 dark:text-white'>
+        {
+            skillsData.map(({ name, icon, borderColor, color }) => (
+                <li
+                    class:list={[
+                        'item flex items-center gap-1 border border-black/[0.1] rounded-xl px-5 py-3 shadow-md transition-all duration-300 ease-in-out cursor-default dark:border-white/[0.2]',
+                        borderColor,
+                    ]}
+                >
+                    <>
+                        <span class:list={['transition-all duration-300 ease-in-out ', color]}>
+                            <Icon name={icon} />
+                        </span>
+                        <span>{name}</span>
+                    </>
+                </li>
+            ))
+        }
+    </ul>
+</section>
+
+<!-- <style is:global>
+    li {
+        @apply ditem flex items-center gap-1 border border-black/10 rounded-xl px-5 py-3 shadow-md transition-all duration-300 ease-in-out cursor-default dark:border-white/20 hover:cursor-pointer;
+    }
+</style> -->

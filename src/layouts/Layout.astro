@@ -1,5 +1,7 @@
 ---
+import Grandient from '@/components/Grandient.astro'
 import Header from '../components/Header.astro'
+import ThemeSwitch from '@/components/ThemeSwitch.astro'
 
 interface Props {
     title: string
@@ -9,7 +11,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es' class='!scroll-smooth'>
     <head>
         <meta charset='UTF-8' />
         <meta name='description' content='Astro description' />
@@ -18,7 +20,7 @@ const { title } = Astro.props
         <meta name='generator' content={Astro.generator} />
         <title>{title}</title>
         <script is:inline src='https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js'></script>
-        <script>
+        <!-- <script>
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             if (
                 localStorage.getItem('color-theme') === 'dark' ||
@@ -28,12 +30,79 @@ const { title } = Astro.props
             } else {
                 document.documentElement.classList.remove('dark')
             }
-        </script>
+        </script> -->
     </head>
 
-    <body>
+    <body
+        class='relative bg-gray-50 text-gray-950 pt-28 sm:pt-32 dark:bg-gray-900 dark:text-gray-200 dark:text-opacity-90'
+    >
+        <Grandient />
         <Header />
         <slot />
+        <ThemeSwitch />
     </body>
-   
 </html>
+
+<style is:global>
+    @font-face {
+        font-family: 'Cascadia Code PL';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+        src: url('/fonts/CascadiaCodePL.woff2') format('woff2');
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Inter Variable', sans-serif;
+    }
+    .link {
+        @apply text-white transition-all duration-300 hover:text-white/60;
+    }
+    .purpletopink {
+        @apply bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text font-extrabold text-transparent;
+    }
+    .pinktoorange {
+        @apply bg-gradient-to-r from-pink-600 to-orange-400 bg-clip-text font-extrabold text-transparent;
+    }
+    .orangetored {
+        @apply bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text font-extrabold text-transparent;
+    }
+    .bluetocyan {
+        @apply bg-gradient-to-r from-blue-400 to-teal-600 bg-clip-text font-extrabold text-transparent;
+    }
+    .redtoorange {
+        @apply bg-gradient-to-r from-red-400 to-orange-600 bg-clip-text font-extrabold text-transparent;
+    }
+    .hover-purpletopink {
+        @apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .hover-pinktoorange {
+        @apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-orange-400 hover:bg-clip-text hover:text-transparent;
+    }
+    .hover-orangetored {
+        @apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .hover-bluetocyan {
+        @apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-400 hover:to-teal-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .hover-redtoorange {
+        @apply text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-red-400 hover:to-orange-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .bghover-purpletopink {
+        @apply from-purple-500 to-pink-600 hover:bg-gradient-to-r;
+    }
+    .bghover-pinktoorange {
+        @apply hover:bg-gradient-to-r hover:from-pink-600 hover:to-orange-400 hover:bg-clip-text hover:text-transparent;
+    }
+    .bghover-orangetored {
+        @apply hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .bghover-bluetocyan {
+        @apply hover:bg-gradient-to-r hover:from-blue-400 hover:to-teal-600 hover:bg-clip-text  hover:text-transparent;
+    }
+    .bghover-redtoorange {
+        @apply hover:bg-gradient-to-r hover:from-red-400 hover:to-orange-600 hover:bg-clip-text  hover:text-transparent;
+    }
+</style>

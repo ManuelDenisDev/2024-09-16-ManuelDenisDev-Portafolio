@@ -30,6 +30,17 @@ export default {
             animation: {
                 'skew-scroll': 'skew-scroll 20s linear infinite',
             },
+            fontFamily: {
+                intervariable: ['InterVariable', 'Inter'],
+            },
+            fontFamily: {
+                cascadiacode: ['Cascadia Code', 'sans-serif'],
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic':
+                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
         },
         keyframes: {
             'skew-scroll': {

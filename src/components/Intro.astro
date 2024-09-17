@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets'
+import portrait from '../assets/img/mandendev-foto-perfil.png'
+import { Icon } from 'astro-icon/components'
+---
+
+<section id='inicio' class='mb-24 max-w-[50rem] text-center sm:mb-0 scroll-mt-32'>
+    <div class='flex items-center justify-center mb-8'>
+        <div class='relative'>
+            <Image
+                class='rounded-full object-cover border-[0.35rem] border-white shadow-xl'
+                src={portrait}
+                alt='Foto retrato de Manuel Denis Developer'
+                width='150'
+                height='150'
+            />
+            <span
+                class='absolute bottom-0 left-28 rounded-full object-cover border-[0.2rem] bg-white border-white shadow-xl'
+                >👨‍💻</span
+            >
+        </div>
+    </div>
+    <p class='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl'>
+        <span class='font-bold'>Hola 👋,</span> soy <strong class='font-bold'>Manuel Denis Developer.</strong> Soy un <span
+            class='font-bold'>desarrollador de software</span
+        > especializado en el <strong class='font-bold'>Front-end</strong>. Me apasiona construir <span class='italic'
+            >sitios y aplicaciones web de alta calidad</span
+        >. Mi especialidad son tecnologías modernas como <span class='underline'>Astro</span>, <span class='underline'
+            >React</span
+        >, <span class='underline'>Next.js</span>, <span class='underline'>Tailwind CSS</span>, entre otras.
+    </p>
+    <div class='mb-10'>
+        <a class='link font-mono z-[100] text-[3vw] sm:text-base md:text-lg lg:text-xl' href='/'>
+            <h1 class=''>
+                <span class='text-slate-300'>&#60</span><span class='purpletopink'>ManuelDenis </span><span
+                    class='pinktoorange'>developer</span
+                ><span class='text-slate-300'>&#61</span><span class='orangetored'>&#123</span><span class='bluetocyan'
+                    >mandendev</span
+                ><span class='redtoorange'>&#125</span><span class='text-slate-300'>/&#62;</span>
+            </h1>
+        </a>
+    </div>
+    <div class='flex flex-col items-center justify-center gap-3 px-4 mb-10 text-lg font-medium sm:flex-row'>
+        <a
+            href='#'
+            class='flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100'
+            >Contáctame aquí <span class='flex items-center size-8 fill-white'
+                ><Icon name='icono-igual-vector-web' /></span
+            ></a
+        >
+        <a
+            href='#'
+            class='flex items-center gap-2 py-3 transition bg-white rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-100 borderBlack dark:bg-white/15'
+            >Descargar CV <span class='flex items-center size-8 fill-black dark:fill-white'>
+                <Icon name='icono-funcion-vector-web' /></span
+            ></a
+        >
+        <div class='flex gap-3'>
+            <a
+                href='https://www.linkedin.com/in/aldair-palomino/'
+                target='_blank'
+                class='bg-white p-4 text-[1.2rem] text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/15 dark:text-white/90'
+            >
+                <Icon name='ion--logo-linkedin' />
+            </a>
+
+            <a
+                href='https://github.com/StefanoP21'
+                target='_blank'
+                class='bg-white p-4 text-[1.2rem] text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/15 dark:text-white/90'
+            >
+                <Icon name='ion--logo-github' />
+            </a>
+        </div>
+    </div>
+</section>
