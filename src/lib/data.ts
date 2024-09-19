@@ -1,3 +1,30 @@
+export const menuData = [
+    {
+        titulo: 'Inicio',
+        link: '#inicio',
+    },
+    {
+        titulo: 'Habilidades',
+        link: '#habilidades',
+    },
+    {
+        titulo: 'Recursos',
+        link: '#recursos',
+    },
+    {
+        titulo: 'Experiencia',
+        link: '#experiencia',
+    },
+    {
+        titulo: 'Proyectos',
+        link: '#proyectos',
+    },
+    {
+        titulo: 'Contacto',
+        link: '#contacto',
+    },
+] as const
+
 export const skillsData = [
     {
         name: 'HTML',

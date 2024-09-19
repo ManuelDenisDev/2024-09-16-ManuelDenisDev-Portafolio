@@ -1,0 +1,7 @@
+---
+const { identificador, className } = Astro.props
+---
+
+<section id={identificador} class:list={['scroll-mt-28 mb-24 max-w-[53rem] text-center sm:mb-32', className]}>
+    <slot />
+</section>

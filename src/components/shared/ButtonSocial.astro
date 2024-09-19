@@ -1,0 +1,16 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { link, className, icon } = Astro.props
+---
+
+<a
+    href={link}
+    target='_blank'
+    class:list={[
+        'bg-white p-4 text-[1.2rem] text-slate-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-slate-950 active:scale-105 transition borderBlack dark:bg-white/15 dark:text-white/90 dark:hover:text-white',
+        className,
+    ]}
+>
+    <Icon name={icon} />
+</a>

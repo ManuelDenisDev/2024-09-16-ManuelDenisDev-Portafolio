@@ -1,13 +1,16 @@
 ---
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+
+import SectionComponent from './shared/SectionComponent.astro'
 import SectionHeading from './shared/SectionHeading.astro'
-import elenacibajaProyecto from 'public/assets/img/proyectos/elenacibaja-sitioweb-01.webp'
 
 import { projectsData } from '@/lib/data'
-import { Icon } from 'astro-icon/components'
+
+import elenacibajaProyecto from 'public/assets/img/proyectos/elenacibaja-sitioweb-01.webp'
 ---
 
-<section id='proyectos' class='mb-24 scroll-mt-28 sm:mb-32 max-w-[53rem]'>
+<SectionComponent identificador='proyectos'>
     <SectionHeading title='Mis Proyectos' />
     <div class='flex flex-col gap-y-16'>
         {
@@ -68,4 +71,4 @@ import { Icon } from 'astro-icon/components'
             ))
         }
     </div>
-</section>
+</SectionComponent>
