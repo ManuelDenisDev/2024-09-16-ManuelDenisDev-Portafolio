@@ -142,4 +142,128 @@ export const toolsData = [
         borderColor: ' hover:border-[#4a154b] dark:hover:border-[#4a154b]',
         color: 'text-[#4a154b] dark:text-[#4a154b]',
     },
-]
+] as const
+
+export const habilidadesData = {
+    HTML5: {
+        name: 'HTML',
+        icon: 'ion--logo-html5',
+        borderColor: ' hover:border-[#e34c26] dark:hover:border-[#e34c26]',
+        color: 'text-[#e34c26] dark:text-[#e34c26]',
+    },
+    CSS3: {
+        name: 'CSS',
+        icon: 'ion--logo-css3',
+        borderColor: ' hover:border-[#2965f1] dark:hover:border-[#2965f1]',
+        color: 'text-[#2965f1] dark:text-[#2965f1]',
+    },
+    JavaScript: {
+        name: 'JavaScript',
+        icon: 'ion--logo-javascript',
+        borderColor: ' hover:border-[#facc15] dark:hover:border-[#facc15]',
+        color: 'text-[#facc15] dark:text-[#facc15]',
+    },
+    TypeScript: {
+        name: 'TypeScript',
+        icon: 'devicon-plain--typescript',
+        borderColor: ' hover:border-[#3b82f6] dark:hover:border-[#3b82f6]',
+        color: 'text-[#3b82f6] dark:text-[#3b82f6]',
+    },
+    Astro: {
+        name: 'Astro.builds',
+        icon: 'simple-icons--astro',
+        borderColor: ' hover:border-[#ef4444] dark:hover:border-[#ef4444]',
+        color: 'text-[#ef4444] dark:text-[#ef4444]',
+    },
+    React: {
+        name: 'React',
+        icon: 'ion--logo-react',
+        borderColor: ' hover:border-[#0ea5e9] dark:hover:border-[#0ea5e9]',
+        color: 'text-[#0ea5e9] dark:text-[#0ea5e9]',
+    },
+    ReactRouter: {
+        name: 'React Router',
+        icon: 'devicon-plain--reactrouter',
+        borderColor: ' hover:border-[#ef4444] dark:hover:border-[#ef4444]',
+        color: 'text-[#ef4444] dark:text-[#ef4444]',
+    },
+    Redux: {
+        name: 'Redux',
+        icon: 'simple-icons--redux',
+        borderColor: ' hover:border-[#764abc] dark:hover:border-[#764abc]',
+        color: 'text-[#764abc] dark:text-[#764abc]',
+    },
+    NextJS: {
+        name: 'Next.js',
+        icon: 'devicon-plain--nextjs',
+        borderColor: ' hover:border-[#030712] dark:hover:border-white',
+        color: 'text-[#030712] dark:text-white',
+    },
+    TailwindCSS: {
+        name: 'Tailwind CSS',
+        icon: 'simple-icons--tailwindcss',
+        borderColor: ' hover:border-[#06b6d4] dark:hover:border-[#06b6d4]',
+        color: 'text-[#06b6d4] dark:text-[#06b6d4]',
+    },
+    Sass: {
+        name: 'Sass',
+        icon: 'simple-icons--sass',
+        borderColor: ' hover:border-[#cc6699] dark:hover:border-[#cc6699]',
+        color: 'text-[#cc6699] dark:text-[#cc6699]',
+    },
+    Bootstrap: {
+        name: 'Bootstrap',
+        icon: 'simple-icons--bootstrap',
+        borderColor: ' hover:border-[#7952b3] dark:hover:border-[#7952b3]',
+        color: 'text-[#7952b3] dark:text-[#7952b3]',
+    },
+    NodeJS: {
+        name: 'Node.js',
+        icon: 'ion--logo-nodejs',
+        borderColor: ' hover:border-[#68a063] dark:hover:border-[#68a063]',
+        color: 'text-[#68a063] dark:text-[#68a063]',
+    },
+    ExpressJS: {
+        name: 'Express.js',
+        icon: 'simple-icons--express',
+        borderColor: ' hover:border-[#000000] dark:hover:border-white',
+        color: 'text-[#000000] dark:text-white',
+    },
+    MongoDB: {
+        name: 'MongoDB',
+        icon: 'simple-icons--mongodb',
+        borderColor: ' hover:border-[#47a248] dark:hover:border-[#47a248]',
+        color: 'text-[#47a248] dark:text-[#47a248]',
+    },
+} as const
+
+export const projectsData = [
+    {
+        title: 'Elena Cibaja - Interiorismo',
+        description:
+            'Desarrollo de sitio web para interiorista. Trabajo realizado con Astro.builds, TypeScript y Tailwind CSS.',
+        link: 'elenacibajaProyecto',
+        github: '',
+        image: 'elenacibajaProyecto',
+        tags: [
+            habilidadesData.HTML5,
+            habilidadesData.TailwindCSS,
+            habilidadesData.TypeScript,
+            habilidadesData.Astro,
+        ],
+    },
+    {
+        title: 'Manuel Denis - Sitio Web',
+        description:
+            'Desarrollo de sitio web para músico. Trabajo realizado con Next.js, TypeScript y Tailwind CSS.',
+        link: 'https://manueldenismusic.com/',
+        github: '',
+        image: 'elenacibajaProyecto',
+        tags: [
+            habilidadesData.HTML5,
+            habilidadesData.TailwindCSS,
+            habilidadesData.JavaScript,
+            habilidadesData.Astro,
+        ],
+    },
+] as const

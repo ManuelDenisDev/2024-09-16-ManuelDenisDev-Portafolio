@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets'
+import SectionHeading from './shared/SectionHeading.astro'
+import elenacibajaProyecto from 'public/assets/img/proyectos/elenacibaja-sitioweb-01.webp'
+
+import { projectsData } from '@/lib/data'
+import { Icon } from 'astro-icon/components'
+---
+
+<section id='proyectos' class='mb-24 scroll-mt-28 sm:mb-32 max-w-[53rem]'>
+    <SectionHeading title='Mis Proyectos' />
+    <div class='flex flex-col gap-y-16'>
+        {
+            projectsData.map(({ title, description, link, github, image, tags }) => (
+                <article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
+                    <header class='w-full md:w-1/2'>
+                        <figure class='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
+                            <Image
+                                alt='Recién llegado vs 5 años en Nueva Zelanda'
+                                class='object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105'
+                                loading='lazy'
+                                src={elenacibajaProyecto}
+                            />
+                        </figure>
+                    </header>
+                    <main class='w-full md:w-1/2 md:max-w-lg'>
+                        <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>{title}</h3>
+                        <div class='flex flex-wrap mt-2'>
+                            <ul class='flex flex-row mb-2 gap-x-2'>
+                                {tags.map(({ name, icon, borderColor, color }) => (
+                                    <li
+                                        class:list={[
+                                            'flex items-center text-xs gap-x-2 border border-black/[0.1] rounded-xl px-2 py-1 shadow-md transition-all duration-300 ease-in-out cursor-default dark:border-white/[0.2]',
+                                            borderColor,
+                                        ]}
+                                    >
+                                        <>
+                                            <span class:list={['transition-all duration-300 ease-in-out ', color]}>
+                                                <Icon name={icon} />
+                                            </span>
+                                            <span>{name}</span>
+                                        </>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p class='mt-2 text-gray-700 dark:text-gray-400'>{description}</p>
+                            <footer class='flex items-end justify-start mt-4 gap-x-4'>
+                                <a
+                                    target='_blank'
+                                    href={link}
+                                    role='link'
+                                    class='inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-gray-800 transition bg-gray-100 border border-gray-300 dark:text-white dark:bg-gray-800 dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black'
+                                >
+                                    Ver proyecto
+                                </a>
+                                <a
+                                    target='_blank'
+                                    href={github}
+                                    role='link'
+                                    class='inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-gray-800 transition bg-gray-100 border border-gray-300 dark:text-white dark:bg-gray-800 dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black'
+                                >
+                                    Ver código
+                                </a>
+                            </footer>
+                        </div>
+                    </main>
+                </article>
+            ))
+        }
+    </div>
+</section>
