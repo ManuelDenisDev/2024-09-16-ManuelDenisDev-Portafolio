@@ -1,0 +1,27 @@
+---
+import { experienciaData } from '@/lib/data'
+import SectionHeading from './shared/SectionHeading.astro'
+import ExperienciaCards from './ExperienciaCards.astro'
+import SectionComponent from './shared/SectionComponent.astro'
+---
+
+<SectionComponent identificador='experiencia' className='text-left'>
+    <section id='experiencia' class='mb-24 scroll-mt-28 sm:mb-32 max-w-[53rem]'>
+        <SectionHeading title='Mi Experiencia' />
+
+        <ol class='relative border-gray-200 border-s dark:border-gray-700'>
+            {
+                experienciaData.map(({ titulo, empresa, linkEmpresa, fecha, descripcion, icon }) => (
+                    <ExperienciaCards
+                        titulo={titulo}
+                        empresa={empresa}
+                        linkEmpresa={linkEmpresa}
+                        fecha={fecha}
+                        descripcion={descripcion}
+                        icon={icon}
+                    />
+                ))
+            }
+        </ol>
+    </section>
+</SectionComponent>

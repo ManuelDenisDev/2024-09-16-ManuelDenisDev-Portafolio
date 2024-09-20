@@ -1,13 +1,14 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { link, className, icon } = Astro.props
+const { link, className, titulo, icon } = Astro.props
 ---
 
 <a
     href={link}
+    target='_blank'
     class:list={[
         'flex items-center gap-2 py-3 transition bg-white rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-100 borderBlack dark:bg-white/15',
         className,
-    ]}>Descargar CV <span class='flex items-center size-8 fill-black dark:fill-white'> <Icon name={icon} /></span></a
+    ]}>{titulo} <span class='flex items-center size-8 fill-black dark:fill-white'> <Icon name={icon} /></span></a
 >

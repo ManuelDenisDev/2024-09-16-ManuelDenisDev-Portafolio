@@ -1,27 +1,12 @@
 ---
-import { Image } from 'astro:assets'
-import portrait from '../assets/img/mandendev-foto-perfil.png'
-import { Icon } from 'astro-icon/components'
-import ButtonSocial from './shared/ButtonSocial.astro'
 import Button from './shared/Button.astro'
+import ButtonSocial from './shared/ButtonSocial.astro'
+import ContactoLinks from './shared/ContactoLinks.astro'
+import FotoPerfil from './shared/FotoPerfil.astro'
 ---
 
 <section id='inicio' class='mb-24 max-w-[50rem] text-center sm:mb-0 scroll-mt-32'>
-    <div class='flex items-center justify-center mb-8'>
-        <div class='relative'>
-            <Image
-                class='rounded-full object-cover border-[0.35rem] border-white shadow-xl'
-                src={portrait}
-                alt='Foto retrato de Manuel Denis Developer'
-                width='150'
-                height='150'
-            />
-            <span
-                class='absolute bottom-0 left-28 rounded-full object-cover border-[0.2rem] bg-white border-white shadow-xl'
-                >👨‍💻</span
-            >
-        </div>
-    </div>
+    <FotoPerfil />
     <p class='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl'>
         <span class='font-bold'>Hola 👋,</span> soy <strong class='font-bold'>Manuel Denis Developer.</strong> Soy un <span
             class='font-bold'>desarrollador de software</span
@@ -31,31 +16,5 @@ import Button from './shared/Button.astro'
             >React</span
         >, <span class='underline'>Next.js</span>, <span class='underline'>Tailwind CSS</span>, entre otras.
     </p>
-    <div class='mb-10'>
-        <a class='link font-mono z-[100] text-[3vw] sm:text-base md:text-lg lg:text-xl' href='/'>
-            <h1 class=''>
-                <span class='text-slate-300'>&#60</span><span class='purpletopink'>ManuelDenis </span><span
-                    class='pinktoorange'>developer</span
-                ><span class='text-slate-300'>&#61</span><span class='orangetored'>&#123</span><span class='bluetocyan'
-                    >mandendev</span
-                ><span class='redtoorange'>&#125</span><span class='text-slate-300'>/&#62;</span>
-            </h1>
-        </a>
-    </div>
-    <div class='flex flex-col items-center justify-center gap-3 px-4 mb-10 text-lg font-medium sm:flex-row'>
-        <Button
-            link='#'
-            icon='icono-igual-vector-web'
-            className='text-slate-100 hover:bg-slate-950 hover:text-slate-50 bg-slate-800 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-950 dark:hover:text-slate-50'
-        />
-        <Button link='#' icon='icono-funcion-vector-web' />
-        <div class='flex gap-3'>
-            <ButtonSocial link='https://www.linkedin.com/in/manueldenisdev/' icon='ion--logo-linkedin' />
-            <ButtonSocial
-                link='https://github.com/ManuelDenisDev'
-                icon='ion--logo-github'
-                className='text-slate-100 hover:bg-slate-950 hover:text-slate-50 bg-slate-800 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-950 dark:hover:text-slate-50'
-            />
-        </div>
-    </div>
+    <ContactoLinks />
 </section>

@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+import portrait from '../../assets/img/mandendev-foto-perfil.png'
+---
+
+<div class='flex items-center justify-center mb-8'>
+    <div class='relative'>
+        <Image
+            class='rounded-full object-cover border-[0.35rem] border-white shadow-xl'
+            src={portrait}
+            alt='Foto retrato de Manuel Denis Developer'
+            width='150'
+            height='150'
+        />
+        <span
+            class='absolute bottom-0 left-28 rounded-full object-cover border-[0.2rem] bg-white border-white shadow-xl'
+            >👨‍💻</span
+        >
+    </div>
+</div>

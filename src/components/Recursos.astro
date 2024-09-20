@@ -1,13 +1,17 @@
 ---
-import { skillsData } from '@/lib/data'
 import { Icon } from 'astro-icon/components'
+
+import SectionComponent from './shared/SectionComponent.astro'
 import SectionHeading from './shared/SectionHeading.astro'
+
+import { toolsData } from '@/lib/data'
 ---
-<section id='habilidades' class='scroll-mt-28 mb-24 max-w-[53rem] text-center sm:mb-32'>
-    <SectionHeading title='Habilidades' />
+
+<SectionComponent identificador='recursos' className='text-center'>
+    <SectionHeading title='Recursos' />
     <ul class='flex flex-wrap justify-center gap-4 text-xl text-gray-800 dark:text-white'>
         {
-            skillsData.map(({ name, icon, borderColor, color }) => (
+            toolsData.map(({ name, icon, borderColor, color }) => (
                 <li
                     class:list={[
                         'item flex items-center gap-1 border border-black/[0.1] rounded-xl px-5 py-3 shadow-md transition-all duration-300 ease-in-out cursor-default dark:border-white/[0.2]',
@@ -24,5 +28,4 @@ import SectionHeading from './shared/SectionHeading.astro'
             ))
         }
     </ul>
-</section>
-
+</SectionComponent>
