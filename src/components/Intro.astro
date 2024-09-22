@@ -3,18 +3,19 @@ import Button from './shared/Button.astro'
 import ButtonSocial from './shared/ButtonSocial.astro'
 import ContactoLinks from './shared/ContactoLinks.astro'
 import FotoPerfil from './shared/FotoPerfil.astro'
+import SectionComponent from './shared/SectionComponent.astro'
 ---
 
-<section id='inicio' class='mb-24 max-w-[50rem] text-center sm:mb-0 scroll-mt-32'>
-    <FotoPerfil />
-    <p class='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl'>
-        <span class='font-bold'>Hola 👋,</span> soy <strong class='font-bold'>Manuel Denis Developer.</strong> Soy un <span
-            class='font-bold'>desarrollador de software</span
-        > especializado en el <strong class='font-bold'>Front-end</strong>. Me apasiona construir <span class='italic'
-            >sitios y aplicaciones web de alta calidad</span
-        >. Mi especialidad son tecnologías modernas como <span class='underline'>Astro</span>, <span class='underline'
-            >React</span
-        >, <span class='underline'>Next.js</span>, <span class='underline'>Tailwind CSS</span>, entre otras.
-    </p>
-    <ContactoLinks />
-</section>
+<SectionComponent id='inicio' className='text-center'>
+        <FotoPerfil />
+        <p class='mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-2xl'>
+            <span class='font-bold'>Hola 👋,</span> soy <strong class='font-bold'>Manuel Denis Developer.</strong> Soy un
+            <span class='font-bold'>desarrollador de software</span> especializado en el <strong class='font-bold'
+                >Front-end</strong
+            >. Me apasiona construir <span class='italic'>sitios y aplicaciones web de alta calidad</span>. Mi
+            especialidad son tecnologías modernas como <span class='underline'>Astro</span>, <span class='underline'
+                >React</span
+            >, <span class='underline'>Next.js</span>, <span class='underline'>Tailwind CSS</span>, entre otras.
+        </p>
+        <ContactoLinks />
+</SectionComponent>
