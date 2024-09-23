@@ -8,7 +8,7 @@ const { link, className, titulo, icon } = Astro.props
     href={link}
     target='_blank'
     class:list={[
-        'flex items-center gap-2 py-3 transition duration-300  bg-slate-50 rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-100  dark:bg-white/15',
+        'flex items-center gap-2 py-3 transition duration-300  bg-slate-50 text-slate-950 fill-slate-950 dark:bg-slate-50/15 dark:text-slate-50 dark:fill-slate-50 rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-100  ',
         className,
-    ]}>{titulo} <span class='flex items-center size-8 fill-black dark:fill-white'> <Icon name={icon} /></span></a
+    ]}>{titulo} <span class='flex items-center size-8'> <Icon name={icon} /></span></a
 >
