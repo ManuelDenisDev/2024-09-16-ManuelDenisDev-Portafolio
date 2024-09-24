@@ -8,16 +8,16 @@ export const menuData = [
         link: '#habilidades',
     },
     {
-        titulo: 'Recursos',
-        link: '#recursos',
+        titulo: 'Proyectos',
+        link: '#proyectos',
+    },
+    {
+        titulo: 'Herramientas',
+        link: '#herramientas',
     },
     {
         titulo: 'Experiencia',
         link: '#experiencia',
-    },
-    {
-        titulo: 'Proyectos',
-        link: '#proyectos',
     },
     {
         titulo: 'Contacto',
@@ -116,6 +116,30 @@ export const habilidadesTagsData = {
         borderColor: ' hover:border-[#47a248] dark:hover:border-[#47a248]',
         color: 'text-[#47a248] dark:text-[#47a248]',
     },
+    Svelte: {
+        name: 'Svelte',
+        icon: 'icon-svelte',
+        borderColor: ' hover:border-[#ff3e00] dark:hover:border-[#ff3e00]',
+        color: 'text-[#ff3e00] dark:text-[#ff3e00]',
+    },
+    Zustand: {
+        name: 'Zustand',
+        icon: 'icon-zustand',
+        borderColor: ' hover:border-[#ff3e00] dark:hover:border-[#ff3e00]',
+        color: 'text-[#ff3e00] dark:text-[#ff3e00]',
+    },
+    ViewTransitions: {
+        name: 'ViewTransitions',
+        icon: 'icon-view-transitions',
+        borderColor: ' hover:border-[#ff3e00] dark:hover:border-[#ff3e00]',
+        color: 'text-[#ff3e00] dark:text-[#ff3e00]',
+    },
+    shadcnUi: {
+        name: 'shadcn/ui',
+        icon: 'icon-shadcnUi',
+        borderColor: ' hover:border-[#ff3e00] dark:hover:border-[#ff3e00]',
+        color: 'text-[#ff3e00] dark:text-[#ff3e00]',
+    },
 } as const
 
 export const habilidadesData = [
@@ -134,6 +158,10 @@ export const habilidadesData = [
     habilidadesTagsData.NodeJS, // Node.js
     habilidadesTagsData.ExpressJS, // Express.js
     habilidadesTagsData.MongoDB, // MongoDB
+    habilidadesTagsData.Svelte, // Svelte
+    habilidadesTagsData.Zustand, // Zustand
+    habilidadesTagsData.ViewTransitions, // ViewTransitions
+    habilidadesTagsData.shadcnUi, // shadcn/ui
 ] as const
 
 export const experienciaData = [
@@ -239,12 +267,31 @@ export const toolsData = [
 
 export const proyectosData = [
     {
+        title: 'Spotify Clone',
+        description:
+            'Desarrollo de un clon de la web de Spotify. Trabajo realizado con el framework de Astro.builds, junto con TypeScript y Tailwind CSS. El proyecto es una demostracion de las capacidades de Astro.builds para integrar tecnologías modernas como React y Svelte, un estado global con Zustand, transicion entre paginas por medio de las ViewTransitions y algunos componerntes de shadcn/ui.',
+        link: 'https://manueldenis-spotify.netlify.app/',
+        github: 'https://github.com/ManuelDenisDev/2024-09-23-spotify-clone',
+        image: '/assets/img/proyectos/mandendev-spotify-clone.png',
+        tags: [
+            habilidadesTagsData.HTML5,
+            habilidadesTagsData.TailwindCSS,
+            habilidadesTagsData.TypeScript,
+            habilidadesTagsData.Astro,
+            habilidadesTagsData.React,
+            habilidadesTagsData.Svelte,
+            habilidadesTagsData.Zustand,
+            habilidadesTagsData.ViewTransitions,
+            habilidadesTagsData.shadcnUi,
+        ],
+    },
+    {
         title: 'Elena Cibaja - Interiorismo',
         description:
             'Desarrollo de sitio web para interiorista. Trabajo realizado con Astro.builds, TypeScript y Tailwind CSS.',
-        link: 'elenacibajaProyecto',
-        github: '',
-        image: 'elenacibajaProyecto',
+        link: 'https://elenacibaja-portafolio.netlify.app/',
+        github: 'https://github.com/ManuelDenisDev/20240206-elenacibaja-portafolio',
+        image: '/assets/img/proyectos/elenacibaja-sitioweb-01.png',
         tags: [
             habilidadesTagsData.HTML5,
             habilidadesTagsData.TailwindCSS,
@@ -256,9 +303,9 @@ export const proyectosData = [
         title: 'Manuel Denis - Sitio Web',
         description:
             'Desarrollo de sitio web para músico. Trabajo realizado con Next.js, TypeScript y Tailwind CSS.',
-        link: 'https://manueldenismusic.com/',
-        github: '',
-        image: 'elenacibajaProyecto',
+        link: 'https://manueldenis.netlify.app/',
+        github: 'https://github.com/ManuelDenisDev/2024-09-16-ManuelDenisDev-Portafolio',
+        image: '/assets/img/proyectos/manueldenis-portafolio-01.png',
         tags: [
             habilidadesTagsData.HTML5,
             habilidadesTagsData.TailwindCSS,
